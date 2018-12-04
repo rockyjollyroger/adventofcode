@@ -11,38 +11,15 @@ int main()
 {
 	//------------------------------- Start of Program -------------------------------
 
-	cout << "Herro World !" << endl;
+	cout << "DAY 1 ! \n" << endl;
 	
 	ifstream inFile("day1_input.txt", ios::in);
-
-	if (!inFile)
-	{
-		cout << "Unable to read from file day1_input.txt \n";
-		return 0;
-	}
-
-	/*
-	//Read from a file
-	char ch;
-	while (inFile.get(ch))
-		cout.put(ch);
-	*/
-
 	vector<int> frequencies;
 
-	int frequency;
-	while (inFile >> frequency)
-	{
-		frequencies.push_back(frequency);
-	}
+	day1::getFrequencies(frequencies, inFile);
 
-	int size_frequency = frequencies.size();
-	int totalFrequency = 0;
-
-	for (int i = 0;  i < size_frequency; i++)
-	{
-		totalFrequency += frequencies[i];
-	}
+	int totalFrequency = day1::computeFinalFrequency(frequencies);
+	
 
 	cout << "Total Frequency is : " << totalFrequency << endl;
 

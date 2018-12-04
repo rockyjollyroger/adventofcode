@@ -15,8 +15,8 @@ public:
 
 	day1();
 
-
-	void computeFrequency(vector<int>& _frequencyValue, ifstream _inputFIle) const;
+	static void getFrequencies(vector<int>& _frequencies, ifstream& _inputFIle);
+	static int computeFinalFrequency(vector<int> _frequencies);
 
 	~day1();
 };
