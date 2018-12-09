@@ -4,6 +4,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include <map>
 
 #include "day1.h"
 
@@ -15,8 +16,11 @@ public:
 
 	day1();
 
-	static void getFrequencies(vector<int>& _frequencies, ifstream& _inputFIle);
-	static int computeFinalFrequency(vector<int> _frequencies);
+	static void Run(vector<int> _frequencies);
+	static void GetFrequencies(vector<int>& _frequencies, ifstream& _inputFIle);
+	static int SumFrequencies(vector<int> _frequencies);
+    static bool FoundSolution(map<int, int> _map);
+
 
 	~day1();
 };

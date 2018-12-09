@@ -1,2 +1,4 @@
-﻿  main.cpp
+﻿  day1.cpp
+d:\github\adventofcode\adventofcode_2018\adventofcode_2018\day1.cpp(21): warning C4018: '<': signed/unsigned mismatch
+d:\github\adventofcode\adventofcode_2018\adventofcode_2018\day1.cpp(53): warning C4018: '<': signed/unsigned mismatch
   adventofcode_2018.vcxproj -> D:\GitHub\adventofcode\adventofcode_2018\Debug\adventofcode_2018.exe
