@@ -15,8 +15,9 @@ int main()
 	// DAY 1	 Part - 1
 	//------------------------
 
-	cout << "DAY 1 Part 1 ! \n" << endl;
-	
+    cout << "--------------------------------------------------------------" << endl;
+	cout << "DAY 1 PART 1 !\n" << endl;
+
 	ifstream inFile("day1_input.txt", ios::in);
 	vector<int> frequencies;
 
@@ -25,15 +26,18 @@ int main()
 
 	cout << "Total Frequency is : " << totalFrequency << endl;
 
-
 	//------------------------
 	// DAY 1	 Part - 2
 	//------------------------
 
-	cout << "\nDAY 1 Part 2 ! \n" << endl;
-
+    cout << "\n--------------------------------------------------------------" << endl;
+	cout << "\nDAY 1 PART 2 ! \n" << endl;
+   
     day1::Run(frequencies);
 
+    cout << "\n\n--------------------------------------------------------------" << endl;
+    cout << "DAY 1 Completed ! " << endl;
+    cout << "--------------------------------------------------------------" << endl;
 
 	//------------------------------- End of Program -------------------------------
 	cout << "\n\n\nEND OF PROGRAM" << std::endl;
