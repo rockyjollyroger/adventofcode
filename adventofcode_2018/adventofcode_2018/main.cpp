@@ -36,9 +36,9 @@ int main()
 
 
 	//------------------------------- End of Program -------------------------------
-	std::cout << "\n\n\nEND OF PROGRAM" << std::endl;
+	cout << "\n\n\nEND OF PROGRAM" << std::endl;
 	int hold = 0;
-	std::cin >> hold;
+	cin >> hold;
 
 	return 0;
 }

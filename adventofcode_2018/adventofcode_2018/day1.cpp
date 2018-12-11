@@ -8,27 +8,24 @@ day1::day1()
 
 void day1::Run(vector<int> _frequencies)
 {
-    bool m_solutionFound = false;
+    bool m_firstInput = true;
     int sum = 0;
+    int input = 0;
     int running = 0;
     map<int, int> frequency_map;
-    while (!m_solutionFound)
+    
+    while (frequency_map.find(sum) == frequency_map.end())
     {
-        //for the size of the vector add the value and the sum to the map
-            //If we go through the entire area with the vector - loop through it again 
-        //Check the map values if the sum existed already
+        frequency_map.insert(pair<int, int>(sum, 0));
 
-        for (int i = 0; i < _frequencies.size() ; i++)
-        {
-            sum += _frequencies[i];
+        sum += _frequencies[input%_frequencies.size()];
+        input++;
 
-            int counter = 0;
-            frequency_map.insert(pair<int, int>(sum, counter));
-        }
-
-        m_solutionFound = frequency_map.find(sum) == frequency_map.end();
-        cout << "LOOP # " << ++running << endl;
+        ++running;
     }
+
+    cout << "LOOP # " << running << endl;
+    cout << "Solution Found: " << sum << endl;
 }
 
 void day1::GetFrequencies(vector<int>& _frequencies, ifstream& _inputFIle) 
@@ -58,21 +55,6 @@ int day1::SumFrequencies(vector<int> _frequencies)
 	return result;
 }
 
-bool day1::FoundSolution(map<int, int> _map)
-{
-    for (map<int, int>::iterator it = _map.begin(); it != _map.end(); it++ )
-    {
-        cout << it->first << " --->     " << it->second << endl;
-
-        if (it->second == 2)
-        {
-            cout << "The first reocurance of the frequency is: " << it->first << endl;
-            return true;
-        }            
-    }
-
-    return false;
-}
 
 day1::~day1()
 {

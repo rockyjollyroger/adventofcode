@@ -19,8 +19,6 @@ public:
 	static void Run(vector<int> _frequencies);
 	static void GetFrequencies(vector<int>& _frequencies, ifstream& _inputFIle);
 	static int SumFrequencies(vector<int> _frequencies);
-    static bool FoundSolution(map<int, int> _map);
-
 
 	~day1();
 };
